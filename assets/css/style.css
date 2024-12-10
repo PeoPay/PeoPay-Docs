@@ -1,0 +1,145 @@
+/* Base Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: #1b98e0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005ea1;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  color: #005ea1;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+table th, table td {
+  padding: 0.8rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background: #1b98e0;
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Code Blocks */
+code {
+  background: #eef6fb;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #d6336c;
+}
+
+pre {
+  background: #eef6fb;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+nav {
+  background: #0077c8;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #cce7ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #f8f9fa;
+  color: #555;
+}
+
+footer a {
+  color: #007acc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  table th, table td {
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+}
