@@ -1,145 +1,170 @@
-/* Base Styling */
-body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.8;
-  background-color: #f9f9f9;
+/* Reset and Base Styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0; 
+  padding: 0; 
+  border: 0; 
+  font-size: 100%; 
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
   color: #333;
-  margin: 0;
-  padding: 0;
 }
 
-.container {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2rem;
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1.6;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
 }
 
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-top: 3rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+p, ul, ol, table, pre, blockquote {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
+}
+
+/* Links */
 a {
-  color: #1b98e0;
+  color: #0066cc;
   text-decoration: none;
 }
 
 a:hover {
-  color: #005ea1;
   text-decoration: underline;
 }
 
-h1, h2, h3, h4 {
-  color: #005ea1;
-  margin-top: 1.5rem;
-}
-
-p {
-  margin: 1rem 0;
-  line-height: 1.6;
-}
-
-ul {
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Table Styling */
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
+  margin-bottom: 2rem;
 }
 
-table th, table td {
-  padding: 0.8rem;
+thead th {
+  border-bottom: 2px solid #ddd;
+  font-weight: 600;
   text-align: left;
-  border: 1px solid #ddd;
+  padding: 0.75rem;
 }
 
-table th {
-  background: #1b98e0;
-  color: #fff;
+tbody td {
+  border-bottom: 1px solid #eee;
+  padding: 0.75rem;
 }
 
-table tr:nth-child(even) {
+/* Lists inside lists */
+ul ul, ol ol, ul ol, ol ul {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Code blocks and Inline Code */
+pre, code {
+  font-family: Consolas, Menlo, Monaco, 'Courier New', monospace;
+  font-size: 0.95rem;
   background: #f9f9f9;
-}
-
-/* Code Blocks */
-code {
-  background: #eef6fb;
-  padding: 0.2rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 3px;
-  font-family: 'Courier New', Courier, monospace;
-  color: #d6336c;
 }
 
 pre {
-  background: #eef6fb;
   padding: 1rem;
-  border-radius: 5px;
   overflow-x: auto;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
 }
 
-/* Navigation Bar */
-nav {
-  background: #0077c8;
-  padding: 1rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav a {
+/* Buttons (if any) */
+button, input[type="submit"] {
+  background: #0066cc;
   color: #fff;
-  margin: 0 1rem;
-  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
 }
 
-nav a:hover {
-  color: #cce7ff;
+button:hover, input[type="submit"]:hover {
+  background: #0052a3;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: #f8f9fa;
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #eee;
+  padding-left: 1rem;
   color: #555;
+  margin: 1.5rem 0;
+  font-style: italic;
 }
 
-footer a {
-  color: #007acc;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+@media (max-width: 600px) {
   body {
-    font-size: 14px;
+    padding: 1.5rem 1rem;
   }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+}
 
-  .container {
-    padding: 1rem;
-  }
-
-  nav a {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
-
-  table th, table td {
-    font-size: 12px;
-    padding: 0.5rem;
-  }
+/* Additional subtle accents */
+h1::after, h2::after, h3::after, h4::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #0066cc;
+  margin: 0.5rem 0;
 }
