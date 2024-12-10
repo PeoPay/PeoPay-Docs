@@ -1,4 +1,4 @@
-### **PeoPay Documentation Repository**
+# **PeoPay Documentation Repository**
 
 Welcome to the official PeoPay documentation repository. This repository contains all key documents outlining the vision, mechanics, and strategy of the PeoPay ecosystem. PeoPay is designed to empower underbanked populations globally by merging decentralized finance (DeFi) with mobile money systems, creating a platform that is inclusive, scalable, and transparent.
 
@@ -12,6 +12,12 @@ Welcome to the official PeoPay documentation repository. This repository contain
    - [Strategic Plan](./Strategic_Plan/Strategic_Plan.md)
    - [Tokenomics Model](./Tokenomics_Model/Tokenomics_Model.md)
    - [Governance Guide](./Governance_Guide/Governance_Guide.md)
+   - [User Guides](#user-guides)
+     - [Getting Started](./User_Guides/Getting_Started.md)
+     - [Crypto-to-Mobile Guide](./User_Guides/Crypto2Mobile.md)
+     - [Staking Guide](./User_Guides/Staking_Guide.md)
+     - [FAQs](./User_Guides/FAQs.md)
+   - [API Documentation](./API_Documentation/API_Endpoints.md)
 3. [Visual Assets](#visual-assets)
    - [Charts](#charts)
    - [Diagrams](#diagrams)
@@ -64,6 +70,18 @@ A guide to community-driven governance, detailing:
 - Treasury management and liquidity support.
 - Gradual decentralization timeline.
 
+### **6. User Guides**
+- [Getting Started](./User_Guides/Getting_Started.md): A guide to creating an account and using PeoPay.
+- [Crypto-to-Mobile Guide](./User_Guides/Crypto2Mobile.md): Step-by-step instructions for converting crypto to mobile money.
+- [Staking Guide](./User_Guides/Staking_Guide.md): Learn how to stake PeoCoin and earn rewards.
+- [FAQs](./User_Guides/FAQs.md): Answers to common questions about PeoPay.
+
+### **7. [API Documentation](./API_Documentation/API_Endpoints.md)**
+Detailed documentation for developers integrating with PeoPay. Includes:
+- Authentication, transactions, and staking APIs.
+- Governance and DCS endpoints.
+- Example requests and responses.
+
 ---
 
 ## **Visual Assets**
@@ -95,22 +113,10 @@ Feel free to open an issue if you have ideas, suggestions, or questions about th
 
 ```plaintext
 PeoPay-Docs/
-├── README.md
-├── WhitePaper/
-│   ├── PeoPay_White_Paper.md
-│   ├── PeoPay_White_Paper.pdf
-├── DCS_Framework/
-│   ├── DCS_Framework.md
-│   ├── DCS_Framework.pdf
-├── Strategic_Plan/
-│   ├── Strategic_Plan.md
-│   ├── Strategic_Plan.pdf
-├── Tokenomics_Model/
-│   ├── Tokenomics_Model.md
-│   ├── Tokenomics_Model.pdf
-├── Governance_Guide/
-│   ├── Governance_Guide.md
-│   ├── Governance_Guide.pdf
+├── API_Documentation/
+│   ├── API_Endpoints.md
+│   ├── API_Endpoints.html
+│   ├── API_Endpoints.pdf
 ├── Assets/
 │   ├── Charts/
 │   │   ├── user_growth_chart.png
@@ -118,7 +124,41 @@ PeoPay-Docs/
 │   ├── Diagrams/
 │   │   ├── peopay_ecosystem_flowchart.png
 │   │   ├── peoprove_logic_diagram.png
+├── DCS_Framework/
+│   ├── DCS_Framework.md
+│   ├── DCS_Framework.html
+│   ├── DCS_Framework.pdf
+├── Governance_Guide/
+│   ├── Governance_Guide.md
+│   ├── Governance_Guide.html
+│   ├── Governance_Guide.pdf
+├── Strategic_Plan/
+│   ├── Strategic_Plan.md
+│   ├── Strategic_Plan.html
+│   ├── Strategic_Plan.pdf
+├── Tokenomics_Model/
+│   ├── Tokenomics_Model.md
+│   ├── Tokenomics_Model.html
+│   ├── Tokenomics_Model.pdf
+├── User_Guides/
+│   ├── Getting_Started.md
+│   ├── Getting_Started.html
+│   ├── Getting_Started.pdf
+│   ├── Crypto2Mobile.md
+│   ├── Crypto2Mobile.html
+│   ├── Crypto2Mobile.pdf
+│   ├── Staking_Guide.md
+│   ├── Staking_Guide.html
+│   ├── Staking_Guide.pdf
+│   ├── FAQs.md
+│   ├── FAQs.html
+│   ├── FAQs.pdf
+├── WhitePaper/
+│   ├── PeoPay_White_Paper.md
+│   ├── PeoPay_White_Paper.html
+│   ├── PeoPay_White_Paper.pdf
 ├── LICENSE
+├── README.md
 ```
 
 ---

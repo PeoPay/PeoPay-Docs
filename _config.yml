@@ -1,6 +1,57 @@
+# Site Metadata
 title: "PeoPay Documentation"
-description: "Official documentation for PeoPay, including white papers, strategic plans, and technical details."
-theme: jekyll-theme-minimal
-baseurl: "/PeoPay-Docs"
+description: >
+  Official documentation for PeoPay, including white papers, strategic plans,
+  user guides, and technical details.
+author: "PeoPay Team"
 url: "https://peopay.github.io"
+baseurl: "/PeoPay-Docs" # Subpath of your site (if deployed under a folder)
 permalink: pretty
+
+# Jekyll Theme
+theme: jekyll-theme-minimal
+paginate: 10
+
+# Navigation Links
+nav_links:
+  - title: "Home"
+    url: "/"
+  - title: "White Paper"
+    url: "/WhitePaper/PeoPay_White_Paper.html"
+  - title: "DCS Framework"
+    url: "/DCS_Framework/DCS_Framework.html"
+  - title: "Strategic Plan"
+    url: "/Strategic_Plan/Strategic_Plan.html"
+  - title: "Tokenomics Model"
+    url: "/Tokenomics_Model/Tokenomics_Model.html"
+  - title: "Governance Guide"
+    url: "/Governance_Guide/Governance_Guide.html"
+  - title: "User Guides"
+    url: "/User_Guides/Getting_Started.html"
+  - title: "API Documentation"
+    url: "/API_Documentation/API_Endpoints.html"
+
+# Markdown Configuration
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    inline_theme: monokai
+
+# Custom Styling 
+saas:
+  style: compressed
+custom_css: "/assets/css/custom.css"
+
+# Plugins 
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclusions
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
