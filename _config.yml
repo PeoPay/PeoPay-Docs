@@ -26,3 +26,6 @@ nav_links:
     url: "/API_Documentation/API_Endpoints.html"
 
 
+sass:
+  style: compressed
+custom_css: /assets/css/style.css
