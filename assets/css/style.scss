@@ -4,18 +4,21 @@
 /* Import the default Minimal theme styles */
 @import "{{ site.theme }}";
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* Base Styles */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
+  background-color: #f0f8ff; /* Light blue background for PeoPay's branding */
   color: #333;
   margin: 0;
   padding: 0;
 }
 
 a {
-  color: #007acc;
+  color: #1b98e0; /* PeoPay's primary color for links */
   text-decoration: none;
 }
 
@@ -25,15 +28,18 @@ a:hover {
 
 /* Header Styles */
 header {
-  background: #007acc;
+  background: url('/assets/images/logo.png') no-repeat center center;
+  background-size: contain;
+  background-color: #1b98e0; /* Fallback background color */
   color: #fff;
-  padding: 1rem 0;
+  padding: 3rem 0; /* Add extra padding to accommodate the logo */
   text-align: center;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5rem;
+  color: #fff;
 }
 
 header p {
@@ -43,7 +49,7 @@ header p {
 
 /* Navigation Bar */
 nav {
-  background: #005ea1;
+  background: #0077c8; /* PeoPay's secondary color */
   padding: 0.5rem 1rem;
   text-align: center;
 }
@@ -55,22 +61,22 @@ nav a {
 }
 
 nav a:hover {
-  color: #cce7ff;
+  color: #ccf2ff; /* Light hover effect for links */
 }
 
 /* Main Content */
 main {
   max-width: 900px;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 1.5rem;
   background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Headings */
 h1, h2, h3, h4 {
-  color: #005ea1;
+  color: #0077c8;
   margin-top: 1.5rem;
 }
 
@@ -78,30 +84,34 @@ h1, h2, h3, h4 {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 table th, table td {
-  padding: 0.5rem;
+  padding: 0.8rem;
   text-align: left;
   border: 1px solid #ddd;
 }
 
 table th {
-  background: #007acc;
+  background: #1b98e0;
   color: #fff;
+}
+
+table tr:nth-child(even) {
+  background: #f9f9f9;
 }
 
 /* Code Blocks */
 code {
-  background: #f4f4f4;
+  background: #eef6fb;
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
   font-family: 'Courier New', Courier, monospace;
 }
 
 pre {
-  background: #f4f4f4;
+  background: #eef6fb;
   padding: 1rem;
   border-radius: 5px;
   overflow-x: auto;
