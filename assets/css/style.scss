@@ -1,24 +1,20 @@
 ---
 ---
 
-/* Import the default Minimal theme styles */
 @import "{{ site.theme }}";
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Base Styles */
 body {
   font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background-color: #f0f8ff; /* Light blue background for PeoPay's branding */
+  line-height: 1.8;
+  background-color: #f0f8ff;
   color: #333;
   margin: 0;
   padding: 0;
 }
 
 a {
-  color: #1b98e0; /* PeoPay's primary color for links */
+  color: #1b98e0;
   text-decoration: none;
 }
 
@@ -26,20 +22,19 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Header Styles */
+/* Header */
 header {
   background: url('/assets/images/logo.png') no-repeat center center;
   background-size: contain;
-  background-color: #1b98e0; /* Fallback background color */
+  background-color: #1b98e0;
   color: #fff;
-  padding: 3rem 0; /* Add extra padding to accommodate the logo */
+  padding: 3rem 0;
   text-align: center;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5rem;
-  color: #fff;
 }
 
 header p {
@@ -47,10 +42,10 @@ header p {
   font-size: 1.2rem;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
-  background: #0077c8; /* PeoPay's secondary color */
-  padding: 0.5rem 1rem;
+  background: #0077c8;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -60,68 +55,70 @@ nav a {
   font-weight: bold;
 }
 
+nav a.active {
+  font-weight: bold;
+  color: #ccf2ff;
+}
+
 nav a:hover {
-  color: #ccf2ff; /* Light hover effect for links */
+  color: #cce7ff;
 }
 
 /* Main Content */
 main {
   max-width: 900px;
   margin: 2rem auto;
-  padding: 1.5rem;
+  padding: 2rem;
   background: #fff;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Headings */
-h1, h2, h3, h4 {
-  color: #0077c8;
-  margin-top: 1.5rem;
+/* Table of Contents */
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
+li {
+  margin-bottom: 0.5rem;
 }
 
-table th, table td {
-  padding: 0.8rem;
-  text-align: left;
-  border: 1px solid #ddd;
-}
-
-table th {
-  background: #1b98e0;
-  color: #fff;
-}
-
-table tr:nth-child(even) {
-  background: #f9f9f9;
-}
-
-/* Code Blocks */
-code {
-  background: #eef6fb;
-  padding: 0.2rem 0.5rem;
-  border-radius: 3px;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-pre {
-  background: #eef6fb;
-  padding: 1rem;
-  border-radius: 5px;
-  overflow-x: auto;
+a:hover {
+  color: #005ea1;
+  text-decoration: underline;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1rem 0;
-  background: #f1f1f1;
+  padding: 1rem;
+  background: #f8f9fa;
   color: #555;
-  margin-top: 2rem;
+}
+
+footer a {
+  color: #007acc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  nav a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
 }
