@@ -1,0 +1,6 @@
+title: "PeoPay Documentation"
+description: "Official documentation for PeoPay, including white papers, strategic plans, and technical details."
+theme: jekyll-theme-minimal
+baseurl: "/PeoPay-Docs"
+url: "https://peopay.github.io"
+permalink: pretty
