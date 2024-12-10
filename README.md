@@ -1,4 +1,4 @@
-# PeoPay Documentation Repository
+### **PeoPay Documentation Repository**
 
 Welcome to the official PeoPay documentation repository. This repository contains all key documents outlining the vision, mechanics, and strategy of the PeoPay ecosystem. PeoPay is designed to empower underbanked populations globally by merging decentralized finance (DeFi) with mobile money systems, creating a platform that is inclusive, scalable, and transparent.
 
@@ -12,9 +12,12 @@ Welcome to the official PeoPay documentation repository. This repository contain
    - [Strategic Plan](./Strategic_Plan/Strategic_Plan.md)
    - [Tokenomics Model](./Tokenomics_Model/Tokenomics_Model.md)
    - [Governance Guide](./Governance_Guide/Governance_Guide.md)
-3. [How to Contribute](#how-to-contribute)
-4. [Repository Structure](#repository-structure)
-5. [License](#license)
+3. [Visual Assets](#visual-assets)
+   - [Charts](#charts)
+   - [Diagrams](#diagrams)
+4. [How to Contribute](#how-to-contribute)
+5. [Repository Structure](#repository-structure)
+6. [License](#license)
 
 ---
 
@@ -63,6 +66,18 @@ A guide to community-driven governance, detailing:
 
 ---
 
+## **Visual Assets**
+
+### **Charts**
+- [User Growth and Transactions](./Assets/Charts/user_growth_chart.png): A line chart showing growth in users and transactions over time.
+- [Tokenomics Distribution](./Assets/Charts/tokenomics_pie_chart.png): A pie chart illustrating the distribution of PeoCoin supply.
+
+### **Diagrams**
+- [PeoPay Ecosystem Flow](./Assets/Diagrams/peopay_ecosystem_flowchart.png): A flowchart visualizing the interaction between staking, governance, referrals, penalties, and rewards.
+- [PeoProve Logic](./Assets/Diagrams/peoprove_logic_diagram.png): A diagram showing how DCS evaluates user contributions and determines rewards or penalties.
+
+---
+
 ## **How to Contribute**
 
 We welcome contributions from the community to improve and expand PeoPay’s documentation. Here’s how you can contribute:
@@ -97,9 +112,12 @@ PeoPay-Docs/
 │   ├── Governance_Guide.md
 │   ├── Governance_Guide.pdf
 ├── Assets/
-│   ├── Diagrams/
 │   ├── Charts/
-│   ├── Images/
+│   │   ├── user_growth_chart.png
+│   │   ├── tokenomics_pie_chart.png
+│   ├── Diagrams/
+│   │   ├── peopay_ecosystem_flowchart.png
+│   │   ├── peoprove_logic_diagram.png
 ├── LICENSE
 ```
 
@@ -111,4 +129,5 @@ This repository is licensed under the MIT License. You are free to use, modify, 
 
 ---
 
-Thank you for your interest in PeoPay! Together, we can create a platform that redefines financial inclusion and empowers underbanked communities worldwide.
+Thank you for your interest in PeoPay! Together, we can create a platform that redefines financial inclusion and empowers underbanked communities worldwide. 🚀
+

@@ -112,7 +112,7 @@ To revolutionize financial inclusion by merging blockchain and mobile money syst
 
 #### **8.1 Role of DCS in Pilots**
 - Reward users for active participation during pilots, including referrals, staking, and governance engagement.
-- Collect data to refine DCS parameters (\(\alpha, \beta, \gamma, \delta, \epsilon\)).
+- Collect data to refine DCS parameters ($\alpha, \beta, \gamma, \delta, \epsilon$).
 
 #### **8.2 Metrics to Track**
 1. DCS score distribution across user segments.

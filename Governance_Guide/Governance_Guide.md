@@ -38,7 +38,11 @@ The PeoPay Governance Guide outlines the framework for decentralized decision-ma
   - Token holders submit proposals for upgrades, fee adjustments, treasury allocations, and new features.
 - **Voting**:
   - Token-weighted voting determines proposal outcomes.
-  - Voting power = \( \text{PEO Holdings} \times \text{DCS Score Modifier} \).
+  - Voting power = $\text{PEO Holdings}$$
+
+$$\times$
+$$
+$\text{DCS Score Modifier}$.
 - **Implementation**:
   - Approved proposals are executed automatically via smart contracts or by the designated teams.
 
@@ -60,14 +64,20 @@ The PeoPay Governance Guide outlines the framework for decentralized decision-ma
 
 #### **4.2 Voting Power**
 - Voting power is calculated using the following formula:
-  \[
-  \text{Voting Power} = \text{PEO Holdings} \times \text{DCS Modifier}
-  \]
+$$
+\text{Voting Power} = \text{PEO Holdings}
+$$
+
+$$\times$$
+
+$$
+\text{DCS Modifier}
+$$
   - **DCS Modifier**:
-    - Bronze Tier: \(1.0 \)
-    - Silver Tier: \(1.1 \)
-    - Gold Tier: \(1.2 \)
-    - Platinum Tier: \(1.3 \)
+    - Bronze Tier: $1.0$
+    - Silver Tier: $1.1$
+    - Gold Tier: $1.2$
+    - Platinum Tier: $1.3$
 
 #### **4.3 Quorum and Approval**
 - **Quorum**: Minimum 10% of circulating PEO must participate for the vote to be valid.
