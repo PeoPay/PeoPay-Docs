@@ -1,8 +1,22 @@
-# Site Metadata
 title: "PeoPay Documentation"
-description: >
-  Official documentation for PeoPay, including white papers, strategic plans,
-  and technical details.
-show_downloads: true
-google_analytics:
-theme: jekyll-theme-cayman
+description: "Comprehensive documentation for PeoPay, including white papers, strategic plans, and technical details."
+theme: jekyll-theme-minimal
+baseurl: "/PeoPay-Docs" # Subpath of your site
+url: "https://peopay.github.io"
+permalink: pretty
+
+# Navigation links (optional)
+nav_links:
+  - title: "White Paper"
+    url: "/WhitePaper/PeoPay_White_Paper.html"
+  - title: "DCS Framework"
+    url: "/DCS_Framework/DCS_Framework.html"
+  - title: "User Guides"
+    url: "/User_Guides/Getting_Started.html"
+  - title: "API Documentation"
+    url: "/API_Documentation/API_Endpoints.html"
+
+# Plugins (optional for customization)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
