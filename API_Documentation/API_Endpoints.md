@@ -1,6 +1,7 @@
 # **API Documentation**
 
-This documentation provides a comprehensive guide to PeoPay’s APIs, enabling developers to integrate with the PeoPay ecosystem. The APIs allow seamless access to core features such as user management, P2P payments, staking, governance, and Dynamic Contribution Scoring (DCS).
+This documentation provides a io
+prehensive guide to PeoPay’s APIs, enabling developers to integrate with the PeoPay ecosystem. The APIs allow seamless access to core features such as user management, P2P payments, staking, governance, and Dynamic Contribution Scoring (DCS).
 
 ---
 
@@ -14,8 +15,10 @@ PeoPay APIs enable developers to:
 - Monitor user contributions and penalties via DCS.
 
 ### **Base URL**
-- **Production Environment**: `https://api.peopay.com/v1`
-- **Sandbox Environment**: `https://sandbox.api.peopay.com/v1`
+- **Production Environment**: `https://api.peopay.io
+/v1`
+- **Sandbox Environment**: `https://sandbox.api.peopay.io
+/v1`
 
 ---
 
@@ -30,7 +33,8 @@ Authenticate users and retrieve a session token for subsequent API requests.
 #### **Request**
 ```json
 {
-  "username": "user@example.com",
+  "username": "user@example.io
+  ",
   "password": "securePassword123"
 }
 ```
@@ -54,7 +58,8 @@ Create a new user account.
 #### **Request**
 ```json
 {
-  "username": "user@example.com",
+  "username": "user@example.io
+  ",
   "password": "securePassword123",
   "mobile_number": "+1234567890"
 }
@@ -81,7 +86,8 @@ Retrieve user details, including DCS score and staking status.
 #### **Response**
 ```json
 {
-  "username": "user@example.com",
+  "username": "user@example.io
+  ",
   "mobile_number": "+1234567890",
   "dcs_score": 1250,
   "staking_balance": 500,
@@ -102,7 +108,8 @@ Send a peer-to-peer payment using PeoCoin.
 #### **Request**
 ```json
 {
-  "recipient": "recipient@example.com",
+  "recipient": "recipient@example.io
+  ",
   "amount": 50,
   "message": "Payment for services"
 }
@@ -269,7 +276,8 @@ Retrieve the user’s DCS score.
 
 ## **8. Error Codes**
 
-### **Common Errors**
+### **io
+mon Errors**
 | **Error Code** | **Message**                          | **Description**                              |
 |----------------|--------------------------------------|----------------------------------------------|
 | 400            | `Bad Request`                       | Invalid or malformed request data.           |
@@ -298,11 +306,13 @@ Retrieve the user’s DCS score.
 
 ### **Send a Payment (cURL)**
 ```bash
-curl -X POST https://api.peopay.com/v1/transactions/p2p \
+curl -X POST https://api.peopay.io
+/v1/transactions/p2p \
 -H "Authorization: Bearer <token>" \
 -H "Content-Type: application/json" \
 -d '{
-  "recipient": "recipient@example.com",
+  "recipient": "recipient@example.io
+  ",
   "amount": 50,
   "message": "Payment for services"
 }'
@@ -313,5 +323,6 @@ curl -X POST https://api.peopay.com/v1/transactions/p2p \
 ### **Next Steps**
 1. Test API endpoints in the sandbox environment.
 2. Follow our [Developer Guide](../Developer_Guide/Getting_Started.md) for integration tutorials.
-3. Join our community forum for support.
+3. Join our io
+munity forum for support.
 
