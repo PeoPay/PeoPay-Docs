@@ -20,6 +20,7 @@ html {
   font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -33,9 +34,15 @@ body {
   max-width: 860px;
   margin: 0 auto;
   color: #333;
+  position: relative;
 }
 
-/* Typography */
+/* Accent and Variables */
+:root {
+  --accent-color: #0f62fe; /* Vibrant digital blue (IBM Blue) */
+  --hover-scale: 1.02;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   line-height: 1.25;
@@ -77,20 +84,22 @@ hr {
   margin: 2.5rem 0;
 }
 
-/* Accent and Interactivity */
-:root {
-  --accent-color: #0f62fe; /* Vibrant digital blue (IBM Blue) */
-}
-
+/* Links and Hover Effects */
 a {
   color: var(--accent-color);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #0d4ecc;
+  transform: scale(var(--hover-scale));
+}
+
+/* Improved Focus Outline for Accessibility */
+:focus {
+  outline: 3px solid rgba(15,98,254,0.3);
+  outline-offset: 2px;
 }
 
 /* Tables */
@@ -113,19 +122,20 @@ tbody td {
   padding: 0.75rem;
 }
 
-/* Lists inside lists */
+/* Nested Lists */
 ul ul, ol ol, ul ol, ol ul {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
 }
 
-/* Code blocks and Inline Code */
+/* Code blocks and Inline Code with hover effect */
 pre, code {
   font-family: Consolas, Menlo, Monaco, 'Courier New', monospace;
   font-size: 0.95rem;
   background: #f9f9fb;
   padding: 0.3rem 0.5rem;
   border-radius: 4px;
+  transition: background 0.2s ease;
 }
 
 pre {
@@ -133,6 +143,10 @@ pre {
   overflow-x: auto;
   border: 1px solid #e1e1e8;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+pre:hover, code:hover {
+  background: #f0f4ff;
 }
 
 /* Buttons (if any) */
@@ -145,11 +159,12 @@ button, input[type="submit"] {
   font-size: 1rem;
   cursor: pointer;
   font-weight: 500;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 button:hover, input[type="submit"]:hover {
   background: #0d4ecc;
+  transform: scale(var(--hover-scale));
 }
 
 /* Blockquotes */
@@ -172,9 +187,64 @@ h1::after, h2::after, h3::after {
   margin: 0.7rem 0;
 }
 
-/* Subtle hover highlights on interactive elements */
-a:hover, button:hover, input[type="submit"]:hover {
-  filter: brightness(0.9);
+/* Details and Summary for Expandable Content */
+details {
+  margin-bottom: 1.5rem;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  transition: box-shadow 0.2s ease;
+}
+
+details:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+}
+
+details[open] {
+  background: #f0f4ff;
+}
+
+details[open] summary {
+  color: var(--accent-color);
+}
+
+/* Back to Top Link */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent-color);
+  color: #fff;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.back-to-top:hover {
+  background: #0d4ecc;
+  transform: scale(var(--hover-scale));
+}
+
+/* Animate headings when linking with #anchors */
+:target h1, :target h2, :target h3 {
+  animation: highlight 1s ease-out;
+}
+
+@keyframes highlight {
+  0% { background: var(--accent-color); color: #fff; padding: 0.2rem; }
+  100% { background: transparent; color: #111; padding: 0; }
 }
 
 /* Responsive Adjustments */
@@ -186,9 +256,4 @@ a:hover, button:hover, input[type="submit"]:hover {
   h1 { font-size: 2.1rem; }
   h2 { font-size: 1.6rem; }
   h3 { font-size: 1.4rem; }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
