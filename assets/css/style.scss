@@ -1,20 +1,117 @@
 ---
 ---
+
+/* Import the default Minimal theme styles */
 @import "{{ site.theme }}";
 
-/* Custom styles */
+/* Base Styles */
 body {
   font-family: 'Roboto', sans-serif;
-}
-
-h1, h2, h3 {
-  color: #005ea1;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   color: #007acc;
+  text-decoration: none;
 }
 
 a:hover {
+  text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+  background: #007acc;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+/* Navigation Bar */
+nav {
+  background: #005ea1;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #cce7ff;
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2, h3, h4 {
   color: #005ea1;
+  margin-top: 1.5rem;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+table th, table td {
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background: #007acc;
+  color: #fff;
+}
+
+/* Code Blocks */
+code {
+  background: #f4f4f4;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #f1f1f1;
+  color: #555;
+  margin-top: 2rem;
 }
