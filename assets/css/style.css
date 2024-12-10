@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Base Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,9 +16,10 @@ fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td {
 
 html {
   box-sizing: border-box;
+  font-size: 17px;
   font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
   color: #333;
+  -webkit-font-smoothing: antialiased;
 }
 
 *, *:before, *:after {
@@ -26,10 +27,10 @@ html {
 }
 
 body {
-  line-height: 1.6;
-  background: #fff;
-  padding: 2rem 1.5rem;
-  max-width: 800px;
+  line-height: 1.7;
+  background: linear-gradient(to bottom right, #fff, #f6f6f8);
+  padding: 2.5rem 1.5rem;
+  max-width: 860px;
   margin: 0 auto;
   color: #333;
 }
@@ -40,28 +41,30 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   font-weight: 600;
   color: #111;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.4rem;
   margin-top: 3rem;
+  letter-spacing: -0.015em;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.9rem;
   margin-top: 2.5rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-top: 2rem;
 }
 
 p, ul, ol, table, pre, blockquote {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6rem;
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.8;
+  letter-spacing: 0.005em;
 }
 
 ul, ol {
@@ -70,18 +73,24 @@ ul, ol {
 
 hr {
   border: none;
-  border-top: 1px solid #eee;
-  margin: 2rem 0;
+  border-top: 1px solid #e2e2e5;
+  margin: 2.5rem 0;
 }
 
-/* Links */
+/* Accent and Interactivity */
+:root {
+  --accent-color: #0f62fe; /* Vibrant digital blue (IBM Blue) */
+}
+
 a {
-  color: #0066cc;
+  color: var(--accent-color);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #0d4ecc;
 }
 
 /* Tables */
@@ -96,6 +105,7 @@ thead th {
   font-weight: 600;
   text-align: left;
   padding: 0.75rem;
+  background: #fafafa;
 }
 
 tbody td {
@@ -113,58 +123,72 @@ ul ul, ol ol, ul ol, ol ul {
 pre, code {
   font-family: Consolas, Menlo, Monaco, 'Courier New', monospace;
   font-size: 0.95rem;
-  background: #f9f9f9;
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
+  background: #f9f9fb;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
 }
 
 pre {
   padding: 1rem;
   overflow-x: auto;
-  border: 1px solid #eee;
+  border: 1px solid #e1e1e8;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 /* Buttons (if any) */
 button, input[type="submit"] {
-  background: #0066cc;
+  background: var(--accent-color);
   color: #fff;
   border: none;
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1.1rem;
   border-radius: 4px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
 }
 
 button:hover, input[type="submit"]:hover {
-  background: #0052a3;
+  background: #0d4ecc;
 }
 
 /* Blockquotes */
 blockquote {
-  border-left: 4px solid #eee;
+  border-left: 4px solid var(--accent-color);
   padding-left: 1rem;
   color: #555;
   margin: 1.5rem 0;
   font-style: italic;
+  background: #f8f9fc;
+}
+
+/* Heading Accents */
+h1::after, h2::after, h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 0.7rem 0;
+}
+
+/* Subtle hover highlights on interactive elements */
+a:hover, button:hover, input[type="submit"]:hover {
+  filter: brightness(0.9);
 }
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
   body {
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
   }
   
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.3rem; }
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.4rem; }
 }
 
-/* Additional subtle accents */
-h1::after, h2::after, h3::after, h4::after {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 2px;
-  background: #0066cc;
-  margin: 0.5rem 0;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }

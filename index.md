@@ -1,5 +1,4 @@
 ---
-title: "PeoPay Documentation"
 layout: default
 ---
 
