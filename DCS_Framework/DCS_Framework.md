@@ -26,16 +26,16 @@ Dynamic Contribution Scoring (DCS) is a core mechanism within the PeoPay ecosyst
 #### **3.1 Formula**
 The DCS formula calculates a user’s contribution score based on positive activities and penalties:
 
-\[
+$$
 \text{DCS}(t) = \alpha \cdot \text{Tx}(t) + \beta \cdot \text{Stake}(t) + \gamma \cdot \text{Gov}(t) + \delta \cdot \text{Referral}(t) - \epsilon \cdot \text{Penalty}(t)
-\]
+$$
 
-- **\(\text{Tx}(t)\)**: Volume and frequency of transactions.
-- **\(\text{Stake}(t)\)**: Amount of PeoCoin staked over time.
-- **\(\text{Gov}(t)\)**: Participation in governance, such as voting.
-- **\(\text{Referral}(t)\)**: Successful referrals of new users.
-- **\(\text{Penalty}(t)\)**: Deductions for harmful behavior (e.g., fraud, spam).
-- **Weights (\(\alpha, \beta, \gamma, \delta, \epsilon\))**: Dynamically adjusted based on ecosystem priorities.
+- **$\text{Tx}(t)$**: Volume and frequency of transactions.
+- **$\text{Stake}(t)$**: Amount of PeoCoin staked over time.
+- **$\text{Gov}(t)$**: Participation in governance, such as voting.
+- **$\text{Referral}(t)$**: Successful referrals of new users.
+- **$\text{Penalty}(t)$**: Deductions for harmful behavior (e.g., fraud, spam).
+- **Weights ($\alpha, \beta, \gamma, \delta, \epsilon$)**: Dynamically adjusted based on ecosystem priorities.
 
 #### **3.2 Properties**
 - **Transparency**: Users can track their scores and understand how actions affect rewards.
@@ -91,7 +91,7 @@ DCS introduces a tiered system to gamify engagement and reward high-performing u
 - Automated smart contracts execute DCS calculations and reward distributions, ensuring transparency and efficiency.
 
 #### **6.3 Dynamic Adjustments**
-- Weight parameters (\(\alpha, \beta, \gamma, \delta, \epsilon\)) are periodically updated based on ecosystem priorities:
+- Weight parameters ($\alpha, \beta, \gamma, \delta, \epsilon$) are periodically updated based on ecosystem priorities:
   - Example: Increase referral weight during early adoption phases.
 
 ---
