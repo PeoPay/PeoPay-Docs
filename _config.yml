@@ -5,27 +5,3 @@ description: >
   and technical details.
 theme: jekyll-theme-minimal
 remote_theme: pages-themes/minimal@v0.2.0
-
-# Plugins
-plugins:
-  - jekyll-remote-theme
-
-
-nav_links:
-  - title: "Home"
-    url: "/"
-  - title: "White Paper"
-    url: "/WhitePaper/PeoPay_White_Paper.html"
-  - title: "DCS Framework"
-    url: "/DCS_Framework/DCS_Framework.html"
-  - title: "Strategic Plan"
-    url: "/Strategic_Plan/Strategic_Plan.html"
-  - title: "User Guides"
-    url: "/User_Guides/Getting_Started.html"
-  - title: "API Documentation"
-    url: "/API_Documentation/API_Endpoints.html"
-
-
-sass:
-  style: compressed
-custom_css: /assets/css/style.css
