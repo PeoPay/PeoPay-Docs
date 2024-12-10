@@ -1,150 +1,228 @@
-<h2><strong>Dynamic Contribution Scoring (DCS) Framework</strong></h2>
-<hr />
-<h3><strong>1. Overview</strong></h3>
-<p>Dynamic Contribution Scoring (DCS) is a core mechanism within the PeoPay ecosystem. It aligns user behavior with ecosystem goals by providing a transparent and dynamic system for rewarding positive contributions and penalizing harmful actions. DCS ensures fairness and sustainability by incentivizing activities like staking, referrals, and governance participation while discouraging spam, fraud, and malicious actions.</p>
-<hr />
-<h3><strong>2. Purpose</strong></h3>
-<h4><strong>2.1 Key Objectives</strong></h4>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Dynamic Contribution Scoring (DCS) Framework</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+  }
+  h1, h2, h3 {
+    color: #333;
+    margin-top: 1.5em;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+  ul, ol {
+    margin-bottom: 1em;
+    padding-left: 20px;
+  }
+  table {
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    width: 100%;
+  }
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background: #f9f9f9;
+  }
+  code {
+    background: #f7f7f7;
+    padding: 0.2em 0.4em;
+    font-size: 90%;
+    border-radius: 3px;
+  }
+  hr {
+    margin: 2em 0;
+  }
+  a {
+    color: #0073aa;
+  }
+</style>
+</head>
+<body>
+
+<h1>Dynamic Contribution Scoring (DCS) Framework</h1>
+
+<h2>1. Overview</h2>
+<p>Dynamic Contribution Scoring (DCS) is a core mechanism within the PeoPay ecosystem. It aligns user behavior with the platform’s goals by providing a transparent, adaptable system that rewards positive contributions and penalizes harmful actions. By incentivizing beneficial activities like staking, referrals, and governance participation—and discouraging spam, fraud, and malicious conduct—DCS ensures fairness, fosters growth, and promotes long-term sustainability.</p>
+
+<h2>2. Purpose</h2>
+
+<h3>2.1 Key Objectives</h3>
 <ol>
-<li><strong>Encourage Ecosystem Growth</strong>:</li>
-<li>Reward users for staking, transactions, governance, and referrals.</li>
-<li><strong>Discourage Misuse</strong>:</li>
-<li>Penalize fraudulent or harmful actions, maintaining ecosystem integrity.</li>
-<li><strong>Promote Long-Term Engagement</strong>:</li>
-<li>Gamified tiers and rewards motivate sustained user activity.</li>
-<li><strong>Optimize Resource Allocation</strong>:</li>
-<li>Adjust rewards dynamically to support growth areas and ecosystem stability.</li>
+  <li><strong>Encourage Ecosystem Growth</strong>:  
+    Reward users for staking, transacting, participating in governance, and referring new members.</li>
+  <li><strong>Discourage Misuse</strong>:  
+    Penalize fraudulent or harmful actions to maintain ecosystem integrity.</li>
+  <li><strong>Promote Long-Term Engagement</strong>:  
+    Gamified tiers and rewards inspire sustained user involvement.</li>
+  <li><strong>Optimize Resource Allocation</strong>:  
+    Dynamically adjust rewards to support growth priorities and stability.</li>
 </ol>
-<hr />
-<h3><strong>3. Scoring Model</strong></h3>
-<h4><strong>3.1 Formula</strong></h4>
-<p>The DCS formula calculates a user’s contribution score based on positive activities and penalties:</p>
-<p>$$
-\text{DCS}(t) = \alpha \cdot \text{Tx}(t) + \beta \cdot \text{Stake}(t) + \gamma \cdot \text{Gov}(t) + \delta \cdot \text{Referral}(t) - \epsilon \cdot \text{Penalty}(t)
-$$</p>
+
+<h2>3. Scoring Model</h2>
+
+<h3>3.1 Formula</h3>
+<p>The DCS formula calculates a user’s contribution score based on weighted positive activities and penalties:</p>
+<pre><code>DCS(t) = α * Tx(t) + β * Stake(t) + γ * Gov(t) + δ * Referral(t) - ε * Penalty(t)</code></pre>
+
+<p>Where:</p>
 <ul>
-<li><strong>$\text{Tx}(t)$</strong>: Volume and frequency of transactions.</li>
-<li><strong>$\text{Stake}(t)$</strong>: Amount of PeoCoin staked over time.</li>
-<li><strong>$\text{Gov}(t)$</strong>: Participation in governance, such as voting.</li>
-<li><strong>$\text{Referral}(t)$</strong>: Successful referrals of new users.</li>
-<li><strong>$\text{Penalty}(t)$</strong>: Deductions for harmful behavior (e.g., fraud, spam).</li>
-<li><strong>Weights ($\alpha, \beta, \gamma, \delta, \epsilon$)</strong>: Dynamically adjusted based on ecosystem priorities.</li>
+  <li><strong>Tx(t)</strong>: Transaction volume and frequency</li>
+  <li><strong>Stake(t)</strong>: Amount of PeoCoin staked over time</li>
+  <li><strong>Gov(t)</strong>: Governance participation (e.g., voting)</li>
+  <li><strong>Referral(t)</strong>: Successful user referrals</li>
+  <li><strong>Penalty(t)</strong>: Deductions for harmful behavior (e.g., fraud, spam)</li>
+  <li><strong>Weights (α, β, γ, δ, ε)</strong>: Dynamically adjusted based on evolving ecosystem priorities</li>
 </ul>
-<h4><strong>3.2 Properties</strong></h4>
+
+<h3>3.2 Properties</h3>
 <ul>
-<li><strong>Transparency</strong>: Users can track their scores and understand how actions affect rewards.</li>
-<li><strong>Penalty Dominance</strong>: DCS ensures that penalties outweigh rewards for malicious behavior.</li>
-<li><strong>Dynamic Adjustments</strong>: Weight parameters evolve to reflect ecosystem needs.</li>
+  <li><strong>Transparency</strong>: Users can track their scores and understand how actions affect rewards.</li>
+  <li><strong>Penalty Dominance</strong>: Negative behaviors incur substantial penalties, outweighing potential gains.</li>
+  <li><strong>Dynamic Adjustments</strong>: Weight parameters evolve over time, reflecting current ecosystem goals.</li>
 </ul>
-<hr />
-<h3><strong>4. Use Cases</strong></h3>
-<h4><strong>4.1 Staking Rewards</strong></h4>
+
+<h2>4. Use Cases</h2>
+
+<h3>4.1 Staking Rewards</h3>
+<p>DCS scores determine tier-based staking yields:</p>
 <ul>
-<li>Higher DCS scores result in increased staking yield:</li>
-<li><strong>Bronze Tier</strong>: Base staking rewards.</li>
-<li><strong>Silver Tier</strong>: +10% bonus.</li>
-<li><strong>Gold Tier</strong>: +20% bonus.</li>
-<li><strong>Platinum Tier</strong>: +30% bonus.</li>
+  <li><strong>Bronze Tier</strong>: Base staking rewards</li>
+  <li><strong>Silver Tier</strong>: +10% bonus</li>
+  <li><strong>Gold Tier</strong>: +20% bonus</li>
+  <li><strong>Platinum Tier</strong>: +30% bonus</li>
 </ul>
-<h4><strong>4.2 Governance Influence</strong></h4>
+
+<h3>4.2 Governance Influence</h3>
+<p>Users with higher DCS scores have greater voting power, enhancing their influence in decision-making and policy formation.</p>
+
+<h3>4.3 Merchant Incentives</h3>
+<p>Merchants benefit from high DCS scores through:</p>
 <ul>
-<li>Voting power is tied to DCS scores, rewarding active contributors with greater decision-making influence.</li>
+  <li>Reduced transaction fees</li>
+  <li>Access to premium promotional tools and features</li>
 </ul>
-<h4><strong>4.3 Merchant Incentives</strong></h4>
+
+<h3>4.4 Referral Bonuses</h3>
+<p>Referral rewards scale with DCS tiers, encouraging users to grow the ecosystem organically.</p>
+
+<h3>4.5 Penalty Enforcement</h3>
+<p>Malicious activities like fraudulent referrals or governance spamming result in score deductions, reducing rewards and feature access.</p>
+
+<h2>5. Gamification and Tiers</h2>
+<p>DCS employs a tiered system to motivate active participation and higher contributions:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>DCS Tier</th>
+      <th>Score Range</th>
+      <th>Benefits</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Bronze</td>
+      <td>0–499</td>
+      <td>Base staking rewards, standard fees</td>
+    </tr>
+    <tr>
+      <td>Silver</td>
+      <td>500–999</td>
+      <td>+10% rewards, 5% fee discounts</td>
+    </tr>
+    <tr>
+      <td>Gold</td>
+      <td>1000–1999</td>
+      <td>+20% rewards, 10% fee discounts</td>
+    </tr>
+    <tr>
+      <td>Platinum</td>
+      <td>2000+</td>
+      <td>+30% rewards, 20% fee discounts</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>6. Implementation</h2>
+
+<h3>6.1 Data Collection</h3>
+<p>On-chain metrics (e.g., transaction volume, staking activity) and verified off-chain data (e.g., user referrals) feed into DCS calculations.</p>
+
+<h3>6.2 Smart Contracts</h3>
+<p>Automated smart contracts ensure transparent, efficient scoring and reward distribution.</p>
+
+<h3>6.3 Dynamic Adjustments</h3>
+<p>Weight parameters (α, β, γ, δ, ε) are periodically updated to address ecosystem needs. For example, during early growth phases, the referral weight might increase to incentivize user expansion.</p>
+
+<h2>7. Benefits</h2>
+
+<h3>7.1 Fairness and Transparency</h3>
+<p>Users clearly see how their actions impact their DCS and associated rewards.</p>
+
+<h3>7.2 Ecosystem Alignment</h3>
+<p>DCS aligns individual incentives with the broader ecosystem’s health and growth.</p>
+
+<h3>7.3 Fraud Prevention</h3>
+<p>Penalties deter harmful behaviors, maintaining platform integrity.</p>
+
+<h3>7.4 Gamified Engagement</h3>
+<p>Tiered rewards and progression create an engaging, competitive user environment.</p>
+
+<h2>8. Pilot Testing</h2>
+
+<h3>8.1 Objectives</h3>
 <ul>
-<li>Merchants with high DCS scores enjoy:</li>
-<li>Lower transaction fees.</li>
-<li>Access to exclusive features, such as premium promotions.</li>
+  <li>Validate DCS’s influence on user engagement and key ecosystem metrics</li>
+  <li>Adjust weights and tiers based on real-world user data</li>
 </ul>
-<h4><strong>4.4 Referral Bonuses</strong></h4>
-<ul>
-<li>Users earn referral bonuses that scale with their DCS tier, promoting organic ecosystem growth.</li>
-</ul>
-<h4><strong>4.5 Penalty Enforcement</strong></h4>
-<ul>
-<li>Actions like fraudulent referrals or governance spamming result in score deductions and reduced rewards.</li>
-</ul>
-<hr />
-<h3><strong>5. Gamification and Tiers</strong></h3>
-<p>DCS introduces a tiered system to gamify engagement and reward high-performing users:</p>
-<p>| <strong>DCS Tier</strong>   | <strong>Score Range</strong> | <strong>Benefits</strong>                         |
-|----------------|-----------------|---------------------------------------|
-| <strong>Bronze</strong>     | 0–499           | Base staking rewards, standard fees. |
-| <strong>Silver</strong>     | 500–999         | 10% bonus rewards, 5% fee discounts. |
-| <strong>Gold</strong>       | 1000–1999       | 20% bonus rewards, 10% fee discounts.|
-| <strong>Platinum</strong>   | 2000+           | 30% bonus rewards, 20% fee discounts.|</p>
-<hr />
-<h3><strong>6. Implementation</strong></h3>
-<h4><strong>6.1 Data Collection</strong></h4>
-<ul>
-<li>On-chain metrics (e.g., transaction volume, staking activity) and verified off-chain data (e.g., user referrals) are aggregated to compute scores.</li>
-</ul>
-<h4><strong>6.2 Smart Contracts</strong></h4>
-<ul>
-<li>Automated smart contracts execute DCS calculations and reward distributions, ensuring transparency and efficiency.</li>
-</ul>
-<h4><strong>6.3 Dynamic Adjustments</strong></h4>
-<ul>
-<li>Weight parameters ($\alpha, \beta, \gamma, \delta, \epsilon$) are periodically updated based on ecosystem priorities:</li>
-<li>Example: Increase referral weight during early adoption phases.</li>
-</ul>
-<hr />
-<h3><strong>7. Benefits</strong></h3>
-<h4><strong>7.1 Fairness and Transparency</strong></h4>
-<ul>
-<li>Users can track contributions and understand how scores affect rewards.</li>
-</ul>
-<h4><strong>7.2 Ecosystem Alignment</strong></h4>
-<ul>
-<li>Aligns individual incentives with ecosystem goals, driving sustainable growth.</li>
-</ul>
-<h4><strong>7.3 Fraud Prevention</strong></h4>
-<ul>
-<li>Penalizes harmful behavior, protecting the ecosystem from abuse.</li>
-</ul>
-<h4><strong>7.4 Gamified Engagement</strong></h4>
-<ul>
-<li>Tiered rewards create a competitive and engaging user experience.</li>
-</ul>
-<hr />
-<h3><strong>8. Pilot Testing</strong></h3>
-<h4><strong>8.1 Objectives</strong></h4>
-<ul>
-<li>Validate DCS’s impact on user engagement and ecosystem metrics.</li>
-<li>Refine weights and scoring tiers based on real-world data.</li>
-</ul>
-<h4><strong>8.2 Metrics to Track</strong></h4>
+
+<h3>8.2 Metrics to Track</h3>
 <ol>
-<li>Staking participation and reward distribution.</li>
-<li>Growth in user referrals and retention rates.</li>
-<li>Reduction in harmful behaviors (e.g., spam).</li>
-<li>Correlation between DCS tiers and governance participation.</li>
+  <li>Staking participation and reward distribution</li>
+  <li>Growth in user referrals and retention</li>
+  <li>Reduction in spam and other harmful activities</li>
+  <li>Correlation between DCS tiers and governance involvement</li>
 </ol>
-<h4><strong>8.3 Pilot Regions</strong></h4>
-<ul>
-<li>Kenya, Philippines, and Nigeria, integrated with mobile money systems (e.g., M-Pesa, GCash).</li>
-</ul>
+
+<h3>8.3 Pilot Regions</h3>
+<p>Initial tests to be conducted in Kenya, the Philippines, and Nigeria, integrating with local mobile money systems (e.g., M-Pesa, GCash).</p>
+
+<h2>9. Long-Term Vision</h2>
+
+<h3>9.1 Adaptable Scoring</h3>
+<p>DCS parameters will evolve as the ecosystem matures, accommodating new use cases and governance structures.</p>
+
+<h3>9.2 NFT-Based Rewards</h3>
+<p>DCS tiers may be represented as NFTs, granting on-chain credentials and unlocking exclusive platform benefits.</p>
+
+<h3>9.3 Integration with DeFi</h3>
+<p>Future expansions into DeFi products (e.g., lending, borrowing) could leverage DCS scores for determining collateral requirements and interest rates.</p>
+
+<h2>10. Conclusion</h2>
+<p>DCS is integral to PeoPay’s vision of a transparent, user-driven financial ecosystem. By aligning incentives with collective goals, DCS fosters trust, engagement, and sustainable growth—ensuring the platform’s long-term success.</p>
+
 <hr />
-<h3><strong>9. Long-Term Vision</strong></h3>
-<h4><strong>9.1 Adaptable Scoring</strong></h4>
+
+<h3>Next Steps</h3>
 <ul>
-<li>Evolve DCS parameters to reflect changing ecosystem dynamics, such as new use cases or governance structures.</li>
+  <li><a href="../WhitePaper/PeoPay_White_Paper.html">White Paper</a>: Overview of PeoPay’s vision and features</li>
+  <li><a href="../Strategic_Plan/Strategic_Plan.html">Strategic Plan</a>: Implementation and testing details</li>
+  <li><a href="../Tokenomics_Model/Tokenomics_Model.html">Tokenomics Model</a>: Understanding DCS’s role in token dynamics</li>
 </ul>
-<h4><strong>9.2 NFT-Based Rewards</strong></h4>
-<ul>
-<li>Introduce NFT badges that represent on-chain credentials tied to user DCS tiers, unlocking additional benefits.</li>
-</ul>
-<h4><strong>9.3 Integration with DeFi</strong></h4>
-<ul>
-<li>Expand DCS into future DeFi products like lending and borrowing, where scores influence collateral requirements and interest rates.</li>
-</ul>
-<hr />
-<h3><strong>10. Conclusion</strong></h3>
-<p>Dynamic Contribution Scoring is essential to PeoPay’s vision of a transparent, user-driven financial ecosystem. By aligning individual incentives with collective goals, DCS fosters trust, engagement, and sustainability, ensuring the long-term success of the platform.</p>
-<hr />
-<h3><strong>Next Steps</strong></h3>
-<ul>
-<li><a href="../WhitePaper/PeoPay_White_Paper.md">White Paper</a>: For an overview of PeoPay’s vision and features.</li>
-<li><a href="../Strategic_Plan/Strategic_Plan.md">Strategic Plan</a>: For implementation and testing details.</li>
-<li><a href="../Tokenomics_Model/Tokenomics_Model.md">Tokenomics Model</a>: For the role of DCS in token rewards and deflationary mechanisms.</li>
-</ul>
+
+</body>
+</html>

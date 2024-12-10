@@ -162,7 +162,7 @@ The PeoPay Strategic Plan provides a comprehensive roadmap for achieving financi
 ---
 
 ### **Next Steps**
-- [White Paper](../WhitePaper/PeoPay_White_Paper.md): For the vision and core features of PeoPay.
-- [DCS Framework](../DCS_Framework/DCS_Framework.md): For incentive mechanics and scoring.
-- [Tokenomics Model](../Tokenomics_Model/Tokenomics_Model.md): For token allocation and sustainability details.
+- [White Paper](../WhitePaper/PeoPay_White_Paper.html): For the vision and core features of PeoPay.
+- [DCS Framework](../DCS_Framework/DCS_Framework.html): For incentive mechanics and scoring.
+- [Tokenomics Model](../Tokenomics_Model/Tokenomics_Model.html): For token allocation and sustainability details.
 
